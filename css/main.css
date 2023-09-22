@@ -1,0 +1,15 @@
+/* Start Landing */
+.landing .carousel-inner .carousel-item {
+  height: 500px;
+}
+.landing .carousel-item .image-holder img {
+  max-width: 100%;
+}
+.landing .carousel-item .info {
+  opacity: 0;
+  transition: 1s;
+}
+.landing .carousel-item.active .info {
+  opacity: 1;
+}
+/* End Landing */
