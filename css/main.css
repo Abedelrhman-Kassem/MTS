@@ -1,3 +1,73 @@
+:root {
+  --section-color: rgb(244, 244, 244);
+}
+* {
+  user-select: none;
+}
+section {
+  position: relative;
+  padding: 80px 0;
+}
+section.colored {
+  background-color: var(--section-color);
+}
+.bg-white {
+  background-color: white;
+}
+img {
+  max-width: 100%;
+}
+.secondary-title {
+  width: fit-content;
+}
+/* Start Navbar */
+header .navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--section-color);
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+header .nav-item .nav-link {
+  position: relative;
+  transition: 0.3s;
+  width: fit-content;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+header .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  left: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+header .nav-item .nav-link:hover::before,
+header .nav-item .nav-link.active::before {
+  width: 100%;
+  left: 0;
+}
+/* End Navbar */
 /* Start Landing */
 .landing .carousel-inner .carousel-item {
   height: 500px;
@@ -8,8 +78,40 @@
 .landing .carousel-item .info {
   opacity: 0;
   transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 .landing .carousel-item.active .info {
   opacity: 1;
 }
 /* End Landing */
+/* Start Solutions */
+.solutions .boxs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+/* End Solutions */
+/* Start Products & Services */
+.products-services .boxs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+/* End Products & Services */
+
+/* Start about */
+@media (width > 768px) {
+  section.about .central {
+    width: 63%;
+  }
+  section.about .side {
+    width: 30%;
+  }
+}
+/* End about */
+/* Start Parteners */
+.parteners .images img {
+  max-width: 250px;
+}
+/* End Parteners */
