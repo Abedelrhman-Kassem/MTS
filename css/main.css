@@ -1,5 +1,6 @@
 :root {
-  --section-color: rgb(244, 244, 244);
+  /* --section-color: rgb(244, 244, 244); */
+  --section-color: #dee;
 }
 * {
   user-select: none;
@@ -28,6 +29,7 @@ header .navbar {
   transform: translateX(-50%);
   z-index: 1000;
   width: 100%;
+  color: white;
   background-color: var(--section-color);
   transition: 0.1s;
   -webkit-transition: 0.1s;
@@ -99,6 +101,19 @@ header .nav-item .nav-link.active::before {
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
 /* End Products & Services */
+
+/* Start Clients */
+
+section.clients .boxs .box {
+  width: 200px;
+  height: 200px;
+}
+
+section.clients .boxs .box img {
+  max-width: 100%;
+}
+
+/* End Clients */
 
 /* Start about */
 @media (width > 768px) {
