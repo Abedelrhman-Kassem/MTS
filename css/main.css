@@ -1,6 +1,5 @@
 :root {
-  /* --section-color: #498fcd; */
-  /* --section-color: #dee; */
+  /* --section-color: rgb(244,244,244); */
 }
 /* google font icon */
 .material-symbols-outlined {
@@ -16,9 +15,7 @@ section {
   position: relative;
   padding: 80px 0;
 }
-section.colored {
-  background-color: var(--section-color);
-}
+
 .bg-white {
   background-color: white;
 }
