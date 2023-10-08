@@ -1,9 +1,16 @@
 :root {
-  /* --section-color: rgb(244, 244, 244); */
-  --section-color: #dee;
+  /* --section-color: #498fcd; */
+  /* --section-color: #dee; */
 }
+/* google font icon */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/*/// google font icon ///*/
 * {
-  user-select: none;
+  /* user-select: none; */
+  font-family: "Sen", sans-serif;
+  box-sizing: border-box;
 }
 section {
   position: relative;
@@ -21,6 +28,9 @@ img {
 .secondary-title {
   width: fit-content;
 }
+.pointer {
+  cursor: pointer;
+}
 /* Start Navbar */
 header .navbar {
   position: fixed;
@@ -31,6 +41,7 @@ header .navbar {
   width: 100%;
   color: white;
   background-color: var(--section-color);
+  z-index: 9;
   transition: 0.1s;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
@@ -40,6 +51,7 @@ header .navbar {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  background-color: white;
 }
 header .nav-item .nav-link {
   position: relative;
@@ -69,8 +81,43 @@ header .nav-item .nav-link.active::before {
   width: 100%;
   left: 0;
 }
+
+header .logo-pic {
+  width: 70px;
+}
+
+.dropdown-custom {
+  position: relative;
+}
+
+header .about-box {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  width: 150px;
+  padding: 5px;
+  padding-left: 10px;
+  opacity: 0;
+  z-index: 9999;
+  visibility: hidden;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.show-about-box {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+header .about-box li {
+  list-style: none;
+}
 /* End Navbar */
 /* Start Landing */
+
 .landing .carousel-inner .carousel-item {
   height: 500px;
 }
@@ -111,6 +158,7 @@ section.clients .boxs {
 
 section.clients .boxs .box {
   height: 150px;
+  border: 1px solid lightgray;
 }
 
 section.clients .boxs .box img {

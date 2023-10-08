@@ -1,35 +1,47 @@
-// Set active Link and Section
-let navbar = document.querySelector(".navbar");
+let links = document.getElementsByClassName("nav-link");
 let sections = document.querySelectorAll("section");
-let links = document.querySelectorAll(".nav-link");
 
-sections.forEach((sec) => {
-  window.addEventListener("scroll", () => {
-    let secTop = sec.getBoundingClientRect().top;
-    let secHeight = sec.getBoundingClientRect().height;
-
-    if (
-      secTop < 0 + navbar.clientHeight &&
-      secTop > -secHeight + navbar.clientHeight
-    ) {
-      sec.classList.add("active");
-      if (sec.classList.contains("colored")) {
-        navbar.classList.add("bg-white");
-      } else {
-        navbar.classList.remove("bg-white");
+// SCROLL TO THE SECTION WHEN LINK CLICKED
+Array.from(links).forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    for (const section of sections) {
+      if (this.href.split("#")[1] == section.id) {
+        section.scrollIntoView({ behavior: "smooth" });
       }
-    } else sec.classList.remove("active");
+    }
   });
 });
 
-window.addEventListener("scroll", () => {
-  for (let i = 0; i < sections.length; i++) {
-    if (sections[i].classList.contains("active")) {
-      links[i].classList.add("active");
-    } else {
-      links[i].classList.remove("active");
+// SET ACTIVE SECTIONS AND LINKS
+setActive();
+function setActive() {
+  window.addEventListener("scroll", () => {
+    for (const section of sections) {
+      if (
+        section.getBoundingClientRect().top < 44 &&
+        section.getBoundingClientRect().top >=
+          -section.getBoundingClientRect().height + 44
+      ) {
+        section.classList.add("active");
+        document.querySelector(`.${section.id}`).classList.add("active");
+      } else {
+        section.classList.remove("active");
+        document.querySelector(`.${section.id}`).classList.remove("active");
+      }
     }
-  }
-});
+  });
+}
+
+// SHOW ABOUT-BOX IN NAVBAR
+showNavMenu();
+function showNavMenu() {
+  let btn = document.getElementById("drobdown-btn");
+  let aboutBox = document.querySelector(".about-box");
+  btn.addEventListener("click", () =>
+    aboutBox.classList.toggle("show-about-box")
+  );
+}
+
 let copyRight = document.querySelector("footer .copyright");
 copyRight.innerText = `All Rights Reserved © ${new Date().getFullYear()} MTS Solutions.`;
