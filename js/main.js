@@ -1,5 +1,6 @@
 let links = document.getElementsByClassName("nav-link");
 let sections = document.querySelectorAll("section");
+let navbar = document.querySelector(".navbar");
 
 // SCROLL TO THE SECTION WHEN LINK CLICKED
 Array.from(links).forEach((link) => {
@@ -19,9 +20,9 @@ function setActive() {
   window.addEventListener("scroll", () => {
     for (const section of sections) {
       if (
-        section.getBoundingClientRect().top < 44 &&
+        section.getBoundingClientRect().top < navbar.clientHeight &&
         section.getBoundingClientRect().top >=
-          -section.getBoundingClientRect().height + 44
+          -section.getBoundingClientRect().height + navbar.clientHeight
       ) {
         section.classList.add("active");
         document.querySelector(`.${section.id}`).classList.add("active");

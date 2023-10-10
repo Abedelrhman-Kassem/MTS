@@ -1,5 +1,13 @@
 :root {
   /* --section-color: rgb(244,244,244); */
+  /* #b3f4ff */
+}
+body {
+  background-color: rgb(244, 244, 244) !important;
+}
+*::selection {
+  background-color: gray;
+  color: #58dcf3;
 }
 /* google font icon */
 .material-symbols-outlined {
@@ -11,6 +19,19 @@
   font-family: "Sen", sans-serif;
   box-sizing: border-box;
 }
+
+.text-color {
+  color: #092346;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
 section {
   position: relative;
   padding: 80px 0;
@@ -80,7 +101,7 @@ header .nav-item .nav-link.active::before {
 }
 
 header .logo-pic {
-  width: 70px;
+  width: 120px;
 }
 
 .dropdown-custom {
@@ -94,7 +115,7 @@ header .about-box {
   background-color: white;
   width: 150px;
   padding: 5px;
-  padding-left: 10px;
+  padding-left: 10px !important;
   opacity: 0;
   z-index: 9999;
   visibility: hidden;
@@ -109,9 +130,6 @@ header .about-box {
   opacity: 1 !important;
 }
 
-header .about-box li {
-  list-style: none;
-}
 /* End Navbar */
 /* Start Landing */
 
@@ -133,32 +151,37 @@ header .about-box li {
   opacity: 1;
 }
 /* End Landing */
-/* Start Solutions */
-.solutions .boxs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+
+/* Start about us */
+.about .central p {
+  color: #13b3cf;
 }
-/* End Solutions */
+.about .side div p {
+  color: #13b3cf;
+}
+/* End about us */
+
 /* Start Products & Services */
-.products-services .boxs {
+.products .boxs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
+
 /* End Products & Services */
 
 /* Start Clients */
 
-section.clients .boxs {
+section.clients .images-holder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-section.clients .boxs .box {
+section.clients .images-holder .image-holder {
   height: 150px;
   border: 1px solid lightgray;
 }
 
-section.clients .boxs .box img {
+section.clients .image-holder img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -175,11 +198,11 @@ section.clients .boxs .box img {
   }
 }
 /* End about */
-/* Start Parteners */
-.parteners .images img {
-  max-width: 250px;
+/* Start partnership */
+.partnership .images img {
+  width: 250px;
 }
-/* End Parteners */
+/* End partnership */
 
 .new {
   background-color: var(--section-color);
@@ -189,8 +212,4 @@ section.clients .boxs .box img {
 }
 .new .image-slider img {
   width: 100%;
-}
-
-.text-color {
-  color: #092346;
 }
