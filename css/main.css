@@ -3,9 +3,7 @@
   /* #b3f4ff */
   --main-text-color: #0f4ea1;
 }
-body {
-  background-color: rgb(244, 244, 244) !important;
-}
+
 *::selection {
   background-color: gray;
   color: #58dcf3;
@@ -27,7 +25,7 @@ body {
 
 section {
   position: relative;
-  padding: 80px 0;
+  padding: 120px;
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -40,14 +38,15 @@ section.show {
   opacity: 1;
 }
 
-section.hide:not(.contact) {
-  top: 200px;
+section.hide-right {
+  right: 200px;
+  opacity: 0;
+}
+section.hide-left {
+  left: 200px;
   opacity: 0;
 }
 
-.bg-white {
-  background-color: white;
-}
 img {
   max-width: 100%;
 }
@@ -109,7 +108,7 @@ header .nav-item .nav-link.active::before {
 }
 
 header .logo-pic {
-  width: 150px;
+  width: 170px;
 }
 
 .dropdown-custom {
@@ -163,10 +162,8 @@ header .about-box {
 /* Start Products & Services */
 
 .products .logo-holder img {
-  width: 150px;
-}
-.products .odoo-product-logo img {
-  width: 120px;
+  width: 250px;
+  height: 65px;
 }
 
 .products .boxs {
@@ -188,7 +185,8 @@ header .about-box {
   text-align: center;
 }
 .clients .box h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-weight: bold;
   color: var(--main-text-color);
 }
 
@@ -199,9 +197,9 @@ section.clients .images-holder {
 }
 
 section.clients .images-holder .image-holder {
-  width: 120px;
+  /* width: 120px; */
   height: 120px;
-  border: 1px solid lightgray;
+  max-width: 120px;
 }
 
 section.clients .image-holder img {
