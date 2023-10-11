@@ -1,6 +1,7 @@
 :root {
   /* --section-color: rgb(244,244,244); */
   /* #b3f4ff */
+  --main-text-color: #0f4ea1;
 }
 body {
   background-color: rgb(244, 244, 244) !important;
@@ -21,15 +22,7 @@ body {
 }
 
 .text-color {
-  color: #092346;
-}
-
-ul {
-  padding-left: 0 !important;
-}
-
-li {
-  list-style: none;
+  color: var(--main-text-color);
 }
 
 section {
@@ -101,7 +94,7 @@ header .nav-item .nav-link.active::before {
 }
 
 header .logo-pic {
-  width: 120px;
+  width: 150px;
 }
 
 .dropdown-custom {
@@ -137,7 +130,7 @@ header .about-box {
   height: 500px;
 }
 .landing .carousel-item .image-holder img {
-  max-width: 100%;
+  width: 100%;
 }
 .landing .carousel-item .info {
   opacity: 0;
@@ -152,16 +145,15 @@ header .about-box {
 }
 /* End Landing */
 
-/* Start about us */
-.about .central p {
-  color: #13b3cf;
-}
-.about .side div p {
-  color: #13b3cf;
-}
-/* End about us */
-
 /* Start Products & Services */
+
+.products .logo-holder img {
+  width: 150px;
+}
+.products .odoo-product-logo img {
+  width: 120px;
+}
+
 .products .boxs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -171,13 +163,29 @@ header .about-box {
 
 /* Start Clients */
 
-section.clients .images-holder {
+.clients .boxs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: space-evenly;
+}
+
+.clients .box {
+  text-align: center;
+}
+.clients .box h2 {
+  font-size: 1.3em;
+  color: var(--main-text-color);
+}
+
+section.clients .images-holder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 section.clients .images-holder .image-holder {
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border: 1px solid lightgray;
 }
 
