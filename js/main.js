@@ -2,6 +2,23 @@ let links = document.getElementsByClassName("nav-link");
 let sections = document.querySelectorAll("section");
 let navbar = document.querySelector(".navbar");
 
+// put animations on sections
+function secAnimate(section) {
+  if (section.getBoundingClientRect().top < 600) {
+    section.classList.add("show");
+    section.classList.remove("hide");
+  } else {
+    section.classList.add("hide");
+    section.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", () => {
+  for (let i = 0; i < sections.length; i++) {
+    secAnimate(sections[i]);
+  }
+});
+
 // SCROLL TO THE SECTION WHEN LINK CLICKED
 Array.from(links).forEach((link) => {
   link.addEventListener("click", function (e) {
