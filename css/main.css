@@ -42,6 +42,7 @@ section.hide-right {
   right: 200px;
   opacity: 0;
 }
+
 section.hide-left {
   left: 200px;
   opacity: 0;
@@ -197,9 +198,8 @@ section.clients .images-holder {
 }
 
 section.clients .images-holder .image-holder {
-  /* width: 120px; */
-  height: 120px;
-  max-width: 120px;
+  height: 130px;
+  width: 130px;
 }
 
 section.clients .image-holder img {
