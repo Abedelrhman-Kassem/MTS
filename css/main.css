@@ -215,8 +215,12 @@ header .about-box {
 .clients .box {
   text-align: center;
   position: relative;
-  margin: 40px 0;
-  padding-top: 70px !important;
+  margin: 0;
+  padding-top: 23px !important;
+}
+
+.clients .box.oil-box {
+  top: 27px;
 }
 
 .clients .box h2 {
