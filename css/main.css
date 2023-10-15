@@ -335,3 +335,16 @@ section.contact #submit-btn:hover {
 }
 
 /* End Contact */
+
+/* Start Footer */
+
+footer ul {
+  list-style: none;
+}
+
+footer .nav-link {
+  text-decoration: underline;
+  width: fit-content;
+}
+
+/* End Footer */

@@ -4,6 +4,10 @@ let navbar = document.querySelector(".navbar");
 
 // SCROLL TO THE SECTION WHEN LINK CLICKED
 Array.from(links).forEach((link) => {
+  clickLink(link);
+});
+
+function clickLink(link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     for (const section of sections) {
@@ -12,7 +16,7 @@ Array.from(links).forEach((link) => {
       }
     }
   });
-});
+}
 
 // SET ACTIVE SECTIONS AND LINKS
 setActive();
