@@ -164,11 +164,6 @@ header .about-box {
   opacity: 1;
 }
 
-.landing .carousel-item .info #first-letter {
-  font-weight: bold;
-  color: #714b67;
-}
-
 /* End Landing */
 
 /* Start Products & Services */
@@ -202,16 +197,9 @@ header .about-box {
 .clients .box {
   text-align: center;
   position: relative;
+  margin: 40px 0;
 }
-/* .clients .box:not(:first-of-type)::before {
-  content: "";
-  position: absolute;
-  height: 70%;
-  width: 1px;
-  left: 0;
-  top: 15%;
-  background-color: rgba(0, 0, 0, 0.125);
-} */
+
 .clients .box h2 {
   font-size: 1.2em;
   font-weight: bold;
@@ -236,7 +224,7 @@ section.clients .images-holder .image-holder {
 
 section.clients .image-holder img {
   width: 100%;
-  height: 100%;
+  min-height: 50%;
 }
 
 /* End Clients */
