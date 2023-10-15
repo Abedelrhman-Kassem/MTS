@@ -207,16 +207,22 @@ header .about-box {
   text-align: center;
   position: relative;
   margin: 40px 0;
+  padding-top: 70px !important;
 }
 
 .clients .box h2 {
-  font-size: 1.7em;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 1.5em;
   font-weight: bold;
-  color: #0a58ca;
   color: var(--main-text-color);
-  padding: 10px 20px;
-  width: fit-content;
-  margin: auto;
+  white-space: nowrap;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 section.clients .images-holder {
