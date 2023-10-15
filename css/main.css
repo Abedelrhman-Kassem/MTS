@@ -291,3 +291,30 @@ section.about h3 {
 .new .image-slider img {
   width: 100%;
 }
+/* Start Contact */
+
+section.contact form {
+  max-width: 500px;
+  margin: auto;
+}
+
+section.contact input:focus,
+section.contact textarea:focus {
+  box-shadow: 0 0 0 0.25rem #0f4ea169;
+}
+
+section.contact textarea {
+  resize: none;
+  height: 150px;
+}
+
+section.contact #submit-btn {
+  background-color: var(--main-text-color);
+  outline: none;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 20px;
+}
+
+/* End Contact */
