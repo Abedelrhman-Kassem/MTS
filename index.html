@@ -729,49 +729,66 @@
       <section class="contact" id="contact">
         <div class="container">
           <h2 class="text-center fw-bold title-color mb-5">Contact Us</h2>
-          <form action="">
-            <div class="mb-3">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                class="form-control rounded-pill"
-                id="name"
-                placeholder="Your Name"
-                required
-              />
+          <div class="content row">
+            <form class="col-12 col-md-4">
+              <div class="mb-3">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control rounded-3"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="number">Phone</label>
+                <input
+                  type="text"
+                  class="form-control rounded-3"
+                  id="number"
+                  placeholder="Your Number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="subject">Subject</label>
+                <textarea
+                  type="text"
+                  class="form-control rounded-3"
+                  id="subject"
+                  placeholder="Your Subject"
+                  required
+                ></textarea>
+              </div>
+              <input id="submit-btn" type="submit" value="Send" />
+            </form>
+
+            <div class="information col-12 col-md-4 fs-5">
+              <div class="mb-4">
+                <strong>Address :</strong>
+                Building 45,Area 6,South Lotus,5th Settlement, New Cairo, Egypt.
+              </div>
+              <div class="mb-4">
+                <strong>Postal Code :</strong>
+                12566
+              </div>
+              <div class="mb-4">
+                <strong>Mobile :</strong>
+                (010)18508850 - (010)22558996 - (010)13060239
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                class="form-control rounded-pill"
-                id="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="number">Phone</label>
-              <input
-                type="text"
-                class="form-control rounded-pill"
-                id="number"
-                placeholder="Your Number"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="subject">Subject</label>
-              <textarea
-                type="text"
-                class="form-control"
-                id="subject"
-                placeholder="Your Subject"
-                required
-              ></textarea>
-            </div>
-            <input id="submit-btn" type="submit" value="Send" />
-          </form>
+          </div>
         </div>
       </section>
     </main>
