@@ -164,6 +164,15 @@ header .about-box {
   opacity: 1;
 }
 
+@media (width > 768px) {
+  .carousel-control-next {
+    right: -80px !important;
+  }
+  .carousel-control-prev {
+    left: -80px !important;
+  }
+}
+
 /* End Landing */
 
 /* Start Products & Services */
@@ -201,11 +210,10 @@ header .about-box {
 }
 
 .clients .box h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #0a58ca;
   color: var(--main-text-color);
-  background-color: rgba(9, 255, 0, 0.404);
   padding: 10px 20px;
   width: fit-content;
   margin: auto;
@@ -230,6 +238,11 @@ section.clients .image-holder img {
 /* End Clients */
 
 /* Start about */
+
+section.about h3 {
+  font-size: calc(1rem + 0.6vw) !important;
+}
+
 @media (width > 768px) {
   section.about .central {
     width: 63%;
@@ -241,7 +254,7 @@ section.clients .image-holder img {
 /* End about */
 /* Start partnerships */
 .partnerships .images img {
-  width: 250px;
+  width: 200px;
 }
 /* End partnerships */
 
