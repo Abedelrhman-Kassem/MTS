@@ -185,7 +185,7 @@ header .about-box {
 }
 
 .products .logo-holder img {
-  width: 250px;
+  width: 200px;
 }
 
 .products .boxs {
@@ -198,9 +198,18 @@ header .about-box {
 /* Start Clients */
 
 .clients .boxs {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clients .box-group {
+  min-width: 250px;
+  width: 25%;
 }
 
 .clients .box {
@@ -232,13 +241,18 @@ section.clients .images-holder {
 }
 
 section.clients .images-holder .image-holder {
-  height: 130px;
-  width: 130px;
+  height: 170px;
+  width: 170px;
+}
+
+section.clients .image-holder.bigger img {
+  width: 170px;
+  min-height: 90px;
 }
 
 section.clients .image-holder img {
-  width: 100%;
-  min-height: 50%;
+  width: 130px;
+  min-height: 80px;
 }
 
 /* End Clients */
