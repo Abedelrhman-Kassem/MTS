@@ -1,3 +1,8 @@
+@font-face {
+  font-family: cambria-font;
+  src: url(../Cambria-Font.ttf);
+}
+
 :root {
   /* --section-color: rgb(244,244,244); */
   /* #b3f4ff */
@@ -8,15 +13,17 @@
   background-color: gray;
   color: #58dcf3;
 }
+
 /* google font icon */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 /*/// google font icon ///*/
+
 * {
   /* user-select: none; */
-  font-family: "Sen", sans-serif;
   box-sizing: border-box;
+  font-family: cambria-font;
 }
 
 .text-color {
@@ -198,65 +205,33 @@ header .about-box {
 /* Start Clients */
 
 .clients .boxs {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  justify-content: space-evenly; */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.clients .box-group {
-  min-width: 250px;
-  width: 25%;
-}
-
-.clients .box {
-  text-align: center;
-  position: relative;
-  margin: 0;
-  padding-top: 23px !important;
-}
-
-.clients .box.oil-box {
-  top: 27px;
-}
-
-.clients .box h2 {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--main-text-color);
-  white-space: nowrap;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-
-section.clients .images-holder {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 70px;
+  row-gap: 50px;
 }
 
-section.clients .images-holder .image-holder {
+section.clients .image-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.clients .image-holder {
   height: 180px;
   width: 180px;
 }
 
 section.clients .image-holder.bigger img {
-  width: 180px;
-  min-height: 90px;
+  width: 100%;
+  /* min-height: 90px; */
 }
 
 section.clients .image-holder img {
-  width: 130px;
-  min-height: 80px;
+  width: 80%;
+  /* min-height: 90px; */
 }
 
 /* End Clients */
