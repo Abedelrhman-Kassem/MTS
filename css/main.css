@@ -226,12 +226,12 @@ section.clients .image-holder {
 
 section.clients .image-holder.bigger img {
   width: 100%;
-  /* min-height: 90px; */
+  min-height: 90px;
 }
 
 section.clients .image-holder img {
   width: 80%;
-  /* min-height: 90px; */
+  min-height: 80px;
 }
 
 /* End Clients */
