@@ -52,18 +52,41 @@ let copyRight = document.querySelector("footer .copyright");
 copyRight.innerText = `All Rights Reserved © ${new Date().getFullYear()} MTS Solutions.`;
 
 // Contact Form
-let contactForm = document.querySelector(".contact-form");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+let submitBtnForm = document.querySelector("#submit-btn");
 
-  Email.send({
-    SecureToken: "52fa6ccc-37a4-4bcb-ba6e-443bd550d5a8",
-    To: "boodykassem16@gmail.com",
-    From: "boodykassem16@gmail.com",
-    Subject: "How are you",
-    Body: `Name: ${document.getElementById("name").value}
-          Email: ${document.getElementById("email").value}
-          Phone: ${document.getElementById("number").value}
-          Message: ${document.getElementById("subject").value}`,
-  }).then((message) => alert(message));
+submitBtnForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let phone = document.getElementById("number");
+  let message = document.getElementById("subject");
+
+  sendMail(name, email, phone, message);
 });
+
+function sendMail(name, email, phone, message) {
+  (function () {
+    emailjs.init("dkTedlkKw_k3jiTl_");
+  })();
+
+  let params = {
+    sender: email.value,
+    to: "boodykassem16@gmail.com",
+    message: `Name: ${name.value}
+              Phone: ${phone.value}
+              Message: ${message.value}`,
+  };
+
+  let serviceId = "service_2drsewk";
+  let templateId = "template_xjot4xl";
+
+  emailjs
+    .send(serviceId, templateId, params)
+    .then((res) => alert("Email Sent Success"))
+    .catch((error) => alert(error));
+}
+
+// `Name: ${document.getElementById("name").value}
+//  Email: ${document.getElementById("email").value}
+//  Phone: ${document.getElementById("number").value}
+//  Message: ${document.getElementById("subject").value}`
