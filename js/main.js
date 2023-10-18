@@ -50,3 +50,20 @@ function showNavMenu() {
 
 let copyRight = document.querySelector("footer .copyright");
 copyRight.innerText = `All Rights Reserved © ${new Date().getFullYear()} MTS Solutions.`;
+
+// Contact Form
+let contactForm = document.querySelector(".contact-form");
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  Email.send({
+    SecureToken: "52fa6ccc-37a4-4bcb-ba6e-443bd550d5a8",
+    To: "boodykassem16@gmail.com",
+    From: "boodykassem16@gmail.com",
+    Subject: "How are you",
+    Body: `Name: ${document.getElementById("name").value}
+          Email: ${document.getElementById("email").value}
+          Phone: ${document.getElementById("number").value}
+          Message: ${document.getElementById("subject").value}`,
+  }).then((message) => alert(message));
+});

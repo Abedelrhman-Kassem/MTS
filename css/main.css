@@ -309,6 +309,11 @@ section.contact #submit-btn:hover {
   background-color: var(--main-text-color);
 }
 
+.contact .information,
+footer .information {
+  font-size: 14px;
+}
+
 /* End Contact */
 
 /* Start Footer */
