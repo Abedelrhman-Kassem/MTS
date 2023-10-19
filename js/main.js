@@ -1,4 +1,4 @@
-const reciverMail = "boodykassem16@gmail.com";
+const reciverMail = "Sales@masstech.com.eg";
 
 let links = document.getElementsByClassName("nav-link");
 let sections = document.querySelectorAll("section");
