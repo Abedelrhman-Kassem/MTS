@@ -314,6 +314,11 @@ footer .information {
   font-size: 14px;
 }
 
+.contact .information .title,
+footer .information .title {
+  margin-right: 15px;
+}
+
 /* End Contact */
 
 /* Start Footer */

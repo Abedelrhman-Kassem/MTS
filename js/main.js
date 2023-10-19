@@ -63,20 +63,18 @@ submitBtnForm.addEventListener("click", (e) => {
   let phone = document.getElementById("number");
   let message = document.getElementById("message");
 
-  if (validateName(name)) {
-    if (validateEmail(email)) {
-      if (validatePhone(phone)) {
-        if (validateMessage(message)) {
-          sendMail(name, email, phone, message);
-        } else {
-          document
-            .querySelector(".message-required")
-            .classList.remove("d-none");
-        }
-      } else {
-        document.querySelector(".phone-required").classList.remove("d-none");
-      }
-    }
+  validateName(name);
+  validateEmail(email);
+  validatePhone(phone);
+  validateMessage(message);
+
+  if (
+    validateName(name) &&
+    validateEmail(email) &&
+    validatePhone(phone) &&
+    validateMessage(message)
+  ) {
+    sendMail(name, email, phone, message);
   }
 
   // Name Validate
@@ -108,7 +106,7 @@ submitBtnForm.addEventListener("click", (e) => {
   function validatePhone(phone) {
     let requiredPhoneField = document.querySelector(".phone-required");
 
-    const reg = /(\(\+?(\d{1,4})\))?\s?(\d{1,14})/;
+    const reg = /(\(\+?(\d{1,4})\))?\s?(\+?[0-9]{1,14})/;
 
     if (reg.test(phone.value) == false) {
       requiredPhoneField.classList.remove("d-none");
