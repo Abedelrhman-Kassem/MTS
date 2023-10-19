@@ -21,7 +21,7 @@
     <!-- EmailJs -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      src="node_modules/@emailjs/browser/dist/email.min.js"
     ></script>
 
     <title>Mass Technology Solutions</title>
@@ -647,7 +647,11 @@
                   placeholder="Your Name"
                   required
                 />
+                <div class="text-danger name-required d-none">
+                  Name is Required
+                </div>
               </div>
+
               <div class="mb-3">
                 <label for="email">Email</label>
                 <input
@@ -658,10 +662,15 @@
                   placeholder="Your Email"
                   required
                 />
+                <div class="text-danger email-required d-none">
+                  Email is Required
+                </div>
               </div>
+
               <div class="mb-3">
                 <label for="number">Phone</label>
                 <input
+                  maxlength="20"
                   type="text"
                   class="form-control rounded-3"
                   id="number"
@@ -669,18 +678,26 @@
                   placeholder="Your Number"
                   required
                 />
+                <div class="text-danger phone-required d-none">
+                  Phone is Required
+                </div>
               </div>
+
               <div class="mb-3">
-                <label for="subject">Subject</label>
+                <label for="message">Message</label>
                 <textarea
                   type="text"
                   class="form-control rounded-3"
-                  id="subject"
-                  name="Subject"
-                  placeholder="Your Subject"
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
                   required
                 ></textarea>
+                <div class="text-danger message-required d-none">
+                  Message is Required
+                </div>
               </div>
+
               <input id="submit-btn" type="submit" value="Send" />
             </form>
             <div class="information col-12 col-md-4 mt-5">
