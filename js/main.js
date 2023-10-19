@@ -71,7 +71,7 @@ function sendMail(name, email, phone, message) {
 
   let params = {
     sender: email.value,
-    to: "boodykassem16@gmail.com",
+    to: "Sales@masstech.com.eg",
     message: `Name: ${name.value}
               Phone: ${phone.value}
               Message: ${message.value}`,
