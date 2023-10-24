@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
 
-    <!-- google Font Icon -->
+    <!-- bootstrap Icon -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
     />
 
     <!-- EmailJs -->
@@ -67,9 +67,7 @@
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center"
                     >Partnerships & Clients
-                    <span class="material-symbols-outlined">
-                      arrow_drop_down
-                    </span>
+                    <i class="dropdown-icon bi bi-caret-down-fill ps-1"></i>
                   </a>
                 </li>
                 <ul class="about-box shadow border rounded-2">
@@ -125,6 +123,20 @@
                 class="bg-black"
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                class="bg-black"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                class="bg-black"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
               ></button>
             </div>
             <div class="carousel-inner">
@@ -188,11 +200,68 @@
                   class="slide-item h-100 row align-items-center justify-content-between"
                 >
                   <div class="image-holder d-none d-md-block col-md-6 col-xl-6">
+                    <img
+                      loading="lazy"
+                      src="images/landing-business.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text-color info col-12 col-md-6 fs-5">
+                    <ul>
+                      <li>Financial Management.</li>
+                      <li>General ledger.</li>
+                      <li>Workflows and Audit Trails.</li>
+                      <li>Bank Management.</li>
+                      <li>Budget.</li>
+                      <li>Deferrals.</li>
+                      <li>Bank Reconciliation.</li>
+                      <li>Dimensions.</li>
+                      <li>Fixed Assests and Currencies.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item px-sm-5" data-bs-interval="5000">
+                <div
+                  class="slide-item h-100 row align-items-center justify-content-between"
+                >
+                  <div class="image-holder d-none d-md-block col-md-6 col-xl-6">
+                    <img
+                      loading="lazy"
+                      src="images/landing-microsoft-gp.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text-color info col-12 col-md-6 fs-5">
+                    <span
+                      class="d-block fs-2"
+                      style="font-weight: bold; color: black"
+                      >Microsoft Dynamics GP</span
+                    >
+                    comprehensive business management solution that helps
+                    companies adapt to new opportunities and continued growth,
+                    Designed for how people really work, Microsoft Dynamics GP
+                    equips your people to keep pace with the competition, manage
+                    changing markets, enable unique business requirements, and
+                    connect the full range of business processes across your
+                    organization which Increase the productivity of the staff,
+                    and feel confident that you have made an investment that
+                    will support your business needs now and in the  the future.
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item px-sm-5" data-bs-interval="5000">
+                <div
+                  class="slide-item h-100 row align-items-center justify-content-between"
+                >
+                  <div class="image-holder d-none d-md-block col-md-6 col-xl-6">
                     <img loading="lazy" src="images/odoo-apps.png" alt="" />
                   </div>
                   <div class="text-color info col-12 col-md-6 fs-5">
                     <span
-                      class="d-block fs-1"
+                      class="d-block fs-2"
                       style="font-weight: bold; color: #714b67"
                       >Odoo ERP</span
                     >
@@ -663,18 +732,54 @@
       <section class="partnerships" id="partnerships">
         <div class="container">
           <h2 class="text-center fw-bold title-color mb-5">Partnerships</h2>
+
           <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide text-center mx-auto"
+            data-bs-ride="carousel"
+            data-bs-touch="false"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <div class="image-holder">
+                  <img
+                    loading="lazy"
+                    src="images/microsoft-logo.png"
+                    alt="..."
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="image-holder">
+                  <img
+                    style="height: 70px"
+                    loading="lazy"
+                    src="images/fortinet-logo.png"
+                    alt="..."
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="image-holder">
+                  <img loading="lazy" src="images/odoo-logo.png" alt="..." />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div
             class="images d-flex justify-content-center align-items-center gap-5 flex-wrap"
           >
             <img loading="lazy" src="images/fortinet-logo.png" alt="" />
             <img loading="lazy" src="images/microsoft-logo.png" alt="" />
             <img
+            style="width: 150px"
               loading="lazy"
-              style="width: 150px"
               src="images/odoo-logo.png"
               alt=""
             />
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="contact" id="contact">
@@ -758,7 +863,7 @@
 
               <div class="mb-2 d-flex">
                 <strong class="title">Mobile:</strong>
-                (010)18508850 - (010)22558996 - (010)13060239
+                01018508850 - 01022558996 - 01013060239
               </div>
 
               <div class="mb-3 d-flex">
@@ -781,7 +886,7 @@
         </div>
       </section>
     </main>
-    <footer class="bg-black py-2">
+    <footer class="bg-black py-2 mt-5">
       <div class="container">
         <div class="content row justify-content-evenly">
           <ul class="col-12 col-sm-6 col-md-3 text-white">
